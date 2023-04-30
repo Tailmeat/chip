@@ -4,7 +4,7 @@
     height: 100%;
 }
 
-.bet-place {
+#bet-place {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -12,7 +12,8 @@
     width: 350px;
     height: 350px;
     border-radius: 20%;
-    background-color: rgb(255, 187, 198)
+    background-color: rgb(255, 187, 198);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .circle {
@@ -24,21 +25,23 @@
 }
 
 .chip {
+    z-index: 10px;
     margin-left: calc(50% - 46px);
     margin-top: 15px;
     position: relative;
     display: block;
     width: 70px;
     height: 70px;
-    border: 13px dashed white;
+    border: 13px dashed rgb(255, 255, 255);
     border-radius: 50%;
     line-height: 65px;
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -10px, rgba(0, 0, 0, 0.2) 0px -10px 0px inset;
     transition: 0.08s;
+
 }
 
 .chip:after {

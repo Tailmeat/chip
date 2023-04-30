@@ -238,3 +238,41 @@ bottomRightWinner.addEventListener("click", function () {
     betPlaceMeidumChipCount.textContent = "0";
     betPlaceLargeChipCount.textContent = "0";
 });
+
+let fruit = false;
+
+document.querySelector('#bet-place').addEventListener('click', () => {
+  const chips = document.querySelectorAll('.chip');
+  if (fruit === false) {
+    chips.forEach(chip => {
+      if (chip.innerHTML === "2") {
+        chip.innerHTML = "🍎";
+        chip.style.border = "13px dashed rgba(255, 255, 255, 0)";
+      } else if (chip.innerHTML === "4") {
+        chip.innerHTML = "🍐";
+        chip.style.border = "13px dashed rgba(255, 255, 255, 0)";
+      } else if (chip.innerHTML === "8") {
+        chip.innerHTML = "🍇";
+        chip.style.border = "13px dashed rgba(255, 255, 255, 0)";
+      }
+    });
+    fruit = true;
+  } else {
+    chips.forEach(chip => {
+      if (chip.innerHTML === "🍎") {
+        chip.innerHTML = "2";
+        chip.style.border = "13px dashed rgba(255, 255, 255)";
+      } else if (chip.innerHTML === "🍐") {
+        chip.innerHTML = "4";
+        chip.style.border = "13px dashed rgba(255, 255, 255)";
+      } else if (chip.innerHTML === "🍇") {
+        chip.innerHTML = "8";
+        chip.style.border = "13px dashed rgba(255, 255, 255)";
+      }
+    });
+    fruit = false;
+  }
+});
+
+
+
